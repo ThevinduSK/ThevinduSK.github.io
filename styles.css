@@ -69,21 +69,28 @@ img {
   margin: 0 auto;
 }
 
-.layout {
+.hero-shell {
   display: grid;
-  grid-template-columns: minmax(320px, 0.92fr) minmax(540px, 1.08fr);
-  gap: 5rem;
+  grid-template-columns: minmax(0, 1.08fr) minmax(280px, 0.6fr);
+  gap: 3rem;
+  align-items: start;
+  padding: 6.5rem 0 3.5rem;
 }
 
-.intro-column {
-  position: relative;
+.hero-main {
+  min-width: 0;
 }
 
-.intro-panel {
+.hero-side {
+  min-width: 0;
+}
+
+.hero-side-panel {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 6.5rem 0 4.5rem;
+  gap: 1.5rem;
+  padding-top: 0.9rem;
 }
 
 .brand {
@@ -239,7 +246,12 @@ h1 {
 .nav {
   display: grid;
   gap: 0.8rem;
-  margin-top: 0.25rem;
+  width: 100%;
+  padding: 1.35rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(180deg, rgba(17, 34, 64, 0.72), rgba(17, 34, 64, 0.5));
+  box-shadow: var(--shadow);
 }
 
 .nav a {
@@ -274,8 +286,11 @@ h1 {
 }
 
 .intro-footer {
-  margin-top: auto;
-  padding-top: 2rem;
+  width: 100%;
+  padding: 1.35rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(180deg, rgba(17, 34, 64, 0.58), rgba(17, 34, 64, 0.38));
 }
 
 .social-list {
@@ -305,8 +320,8 @@ h1 {
   max-width: 26rem;
 }
 
-.content-column {
-  padding: 6.5rem 0 4.5rem;
+.content-stack {
+  padding: 1rem 0 4.5rem;
 }
 
 .section {
@@ -582,17 +597,14 @@ h1 {
 }
 
 @media (max-width: 980px) {
-  .layout {
+  .hero-shell {
     grid-template-columns: 1fr;
     gap: 1rem;
+    padding-bottom: 2rem;
   }
 
-  .intro-panel {
-    padding-bottom: 1rem;
-  }
-
-  .content-column {
-    padding-top: 1rem;
+  .hero-side-panel {
+    padding-top: 0;
   }
 
   .fact-grid,
@@ -617,14 +629,19 @@ h1 {
     width: min(100% - 1.25rem, var(--max-width));
   }
 
-  .intro-panel,
-  .content-column {
+  .hero-shell,
+  .content-stack {
     padding-top: 4rem;
   }
 
   .intro-cluster {
     grid-template-columns: 1fr;
     width: min(100%, 18rem);
+  }
+
+  .nav,
+  .intro-footer {
+    padding: 1rem;
   }
 
   .entry-card,
