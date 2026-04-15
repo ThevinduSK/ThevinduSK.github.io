@@ -1,11 +1,19 @@
+const root = document.documentElement;
 const revealItems = document.querySelectorAll("[data-reveal]");
 const navLinks = document.querySelectorAll(".nav a");
-const yearTarget = document.getElementById("year");
 const sections = document.querySelectorAll("[data-section]");
+const yearTarget = document.getElementById("year");
 
 if (yearTarget) {
   yearTarget.textContent = new Date().getFullYear();
 }
+
+const updateSpotlight = (event) => {
+  root.style.setProperty("--mouse-x", `${event.clientX}px`);
+  root.style.setProperty("--mouse-y", `${event.clientY}px`);
+};
+
+window.addEventListener("pointermove", updateSpotlight, { passive: true });
 
 if ("IntersectionObserver" in window) {
   const revealObserver = new IntersectionObserver(
@@ -20,8 +28,8 @@ if ("IntersectionObserver" in window) {
       });
     },
     {
-      threshold: 0.18,
-      rootMargin: "0px 0px -10% 0px",
+      threshold: 0.14,
+      rootMargin: "0px 0px -8% 0px",
     }
   );
 
@@ -47,7 +55,7 @@ if ("IntersectionObserver" in window) {
       });
     },
     {
-      threshold: 0.35,
+      threshold: 0.3,
       rootMargin: "-20% 0px -45% 0px",
     }
   );
