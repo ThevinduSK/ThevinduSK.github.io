@@ -1,0 +1,23 @@
+<svg width="720" height="900" viewBox="0 0 720 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="720" height="900" fill="#0F213A"/>
+  <rect x="28" y="28" width="664" height="844" rx="28" fill="url(#paint0_linear)"/>
+  <circle cx="360" cy="316" r="132" fill="#F0E8DA"/>
+  <path d="M184 714C184 595.291 280.291 499 399 499H321C439.709 499 536 595.291 536 714V745H184V714Z" fill="#F0E8DA"/>
+  <path d="M245 270C257.167 209.167 296.667 178.333 363.5 177.5C430.333 176.667 473.833 210.5 494 279.5C457.167 268.167 419.667 266 381.5 273C343.333 280 297.833 279 245 270Z" fill="#D86A31"/>
+  <rect x="72" y="72" width="576" height="756" rx="22" stroke="#FFFFFF" stroke-opacity="0.2"/>
+  <text x="360" y="120" fill="#D86A31" font-family="Arial, sans-serif" font-size="28" text-anchor="middle" letter-spacing="4">
+    PROFILE IMAGE PLACEHOLDER
+  </text>
+  <text x="360" y="795" fill="#E8EEF7" font-family="Arial, sans-serif" font-size="32" text-anchor="middle">
+    Add your portrait in
+  </text>
+  <text x="360" y="838" fill="#E8EEF7" font-family="Arial, sans-serif" font-size="28" text-anchor="middle">
+    assets/images/profile/
+  </text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="104" y1="120" x2="590" y2="818" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#173155"/>
+      <stop offset="1" stop-color="#10213A"/>
+    </linearGradient>
+  </defs>
+</svg>
