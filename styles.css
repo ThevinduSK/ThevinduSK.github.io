@@ -83,14 +83,21 @@ img {
 
 .hero-side {
   min-width: 0;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .hero-side-panel {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 1.5rem;
-  padding-top: 0.9rem;
+  width: min(100%, 32rem);
+  margin-top: 8.2rem;
+  padding: 1.85rem 2rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(180deg, rgba(17, 34, 64, 0.82), rgba(17, 34, 64, 0.64));
+  box-shadow: var(--shadow);
 }
 
 .brand {
@@ -247,11 +254,7 @@ h1 {
   display: grid;
   gap: 0.8rem;
   width: 100%;
-  padding: 1.35rem;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-lg);
-  background: linear-gradient(180deg, rgba(17, 34, 64, 0.72), rgba(17, 34, 64, 0.5));
-  box-shadow: var(--shadow);
+  padding: 0;
 }
 
 .nav a {
@@ -287,10 +290,8 @@ h1 {
 
 .intro-footer {
   width: 100%;
-  padding: 1.35rem;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-lg);
-  background: linear-gradient(180deg, rgba(17, 34, 64, 0.58), rgba(17, 34, 64, 0.38));
+  margin-top: 2rem;
+  padding-top: 0;
 }
 
 .social-list {
@@ -604,7 +605,8 @@ h1 {
   }
 
   .hero-side-panel {
-    padding-top: 0;
+    width: 100%;
+    margin-top: 0;
   }
 
   .fact-grid,
@@ -641,7 +643,7 @@ h1 {
 
   .nav,
   .intro-footer {
-    padding: 1rem;
+    padding: 0;
   }
 
   .entry-card,
