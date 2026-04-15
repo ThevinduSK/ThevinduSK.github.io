@@ -16,8 +16,8 @@
       rel="stylesheet"
     />
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-    <link rel="stylesheet" href="styles.css" />
-    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="styles.css?v=4" />
+    <script defer src="script.js?v=4"></script>
   </head>
   <body>
     <div class="spotlight" aria-hidden="true"></div>
@@ -40,14 +40,31 @@
               </p>
             </div>
 
-            <figure class="portrait-card">
-              <img
-                class="portrait-image"
-                src="assets/images/profile/Profile.jpg"
-                alt="Portrait of Thevindu Kalubowila"
-              />
-              <figcaption>University of Moratuwa undergraduate, researcher, and builder.</figcaption>
-            </figure>
+            <div class="intro-cluster">
+              <figure class="portrait-card">
+                <img
+                  class="portrait-image"
+                  src="assets/images/profile/Profile.jpg"
+                  alt="Portrait of Thevindu Kalubowila"
+                />
+                <figcaption>University of Moratuwa undergraduate, researcher, and builder.</figcaption>
+              </figure>
+
+              <div class="quick-facts">
+                <article class="quick-fact">
+                  <p class="quick-fact-label">CGPA</p>
+                  <p class="quick-fact-value">3.85 / 4.00</p>
+                </article>
+                <article class="quick-fact">
+                  <p class="quick-fact-label">Current role</p>
+                  <p class="quick-fact-value">Research Intern at KAUST</p>
+                </article>
+                <article class="quick-fact">
+                  <p class="quick-fact-label">Focus</p>
+                  <p class="quick-fact-value">Wireless systems and LoRaWAN experiments</p>
+                </article>
+              </div>
+            </div>
 
             <nav class="nav" aria-label="Section navigation">
               <a href="#about"><span class="nav-line"></span><span>About</span></a>

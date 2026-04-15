@@ -2,18 +2,18 @@
   --navy: #0a192f;
   --navy-deep: #020c1b;
   --navy-soft: #112240;
-  --navy-panel: rgba(17, 34, 64, 0.74);
-  --navy-panel-strong: rgba(17, 34, 64, 0.92);
-  --line: rgba(136, 146, 176, 0.18);
-  --text: #ccd6f6;
-  --text-soft: #a8b2d1;
+  --navy-panel: rgba(17, 34, 64, 0.58);
+  --navy-panel-strong: rgba(17, 34, 64, 0.9);
+  --line: rgba(136, 146, 176, 0.16);
+  --text: #e6f1ff;
+  --text-soft: #c1cde9;
   --text-dim: #8892b0;
   --accent: #64ffda;
   --accent-soft: rgba(100, 255, 218, 0.12);
   --shadow: 0 30px 80px rgba(2, 12, 27, 0.35);
   --radius-lg: 22px;
   --radius-md: 16px;
-  --max-width: 1160px;
+  --max-width: 1240px;
 }
 
 *,
@@ -31,10 +31,12 @@ body {
   margin: 0;
   min-height: 100vh;
   background:
-    radial-gradient(circle at top left, rgba(100, 255, 218, 0.04), transparent 24%),
-    linear-gradient(180deg, #08111f 0%, #0a192f 52%, #08111f 100%);
+    radial-gradient(circle at top left, rgba(100, 255, 218, 0.05), transparent 24%),
+    radial-gradient(circle at 78% 18%, rgba(59, 130, 246, 0.08), transparent 28%),
+    linear-gradient(180deg, #07111f 0%, #0a192f 52%, #08111f 100%);
   color: var(--text-soft);
   font-family: "Inter", sans-serif;
+  font-size: 17px;
   line-height: 1.75;
 }
 
@@ -63,14 +65,14 @@ img {
 }
 
 .site-shell {
-  width: min(var(--max-width), calc(100% - 3rem));
+  width: min(var(--max-width), calc(100% - 4rem));
   margin: 0 auto;
 }
 
 .layout {
   display: grid;
-  grid-template-columns: minmax(280px, 0.94fr) minmax(0, 1.06fr);
-  gap: 4rem;
+  grid-template-columns: minmax(320px, 0.92fr) minmax(540px, 1.08fr);
+  gap: 5rem;
 }
 
 .intro-column {
@@ -83,7 +85,7 @@ img {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  padding: 5.5rem 0 4rem;
+  padding: 6.5rem 0 4.5rem;
 }
 
 .brand {
@@ -91,7 +93,7 @@ img {
   align-items: center;
   gap: 0.85rem;
   width: fit-content;
-  margin-bottom: 2rem;
+  margin-bottom: 2.25rem;
 }
 
 .brand-mark {
@@ -147,53 +149,92 @@ p {
 h1 {
   margin-top: 0.9rem;
   color: var(--text);
-  font-size: clamp(2.9rem, 5vw, 4.7rem);
-  line-height: 1.05;
+  font-size: clamp(3.4rem, 6vw, 5.6rem);
+  line-height: 0.95;
   letter-spacing: -0.04em;
 }
 
 .intro-copy-block h2 {
   margin-top: 1rem;
   color: var(--text-soft);
-  font-size: clamp(1.25rem, 2vw, 1.55rem);
-  line-height: 1.3;
+  max-width: 28rem;
+  font-size: clamp(1.2rem, 1.8vw, 1.6rem);
+  line-height: 1.35;
   letter-spacing: -0.02em;
 }
 
 .intro-copy {
   max-width: 32rem;
-  margin-top: 1.25rem;
+  margin-top: 1.35rem;
   color: var(--text-dim);
-  font-size: 1rem;
+  font-size: 1.02rem;
+}
+
+.intro-cluster {
+  display: grid;
+  grid-template-columns: minmax(0, 15.25rem) minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+  margin: 2.2rem 0 1.8rem;
 }
 
 .portrait-card {
-  width: min(100%, 20rem);
-  margin: 2rem 0;
+  width: 100%;
+  margin: 0;
   overflow: hidden;
-  border: 1px solid var(--line);
+  padding: 0.35rem;
+  border: 1px solid rgba(100, 255, 218, 0.16);
   border-radius: var(--radius-lg);
-  background: linear-gradient(180deg, rgba(17, 34, 64, 0.98), rgba(10, 25, 47, 0.98));
+  background:
+    linear-gradient(145deg, rgba(100, 255, 218, 0.18), rgba(17, 34, 64, 0.14) 42%, rgba(17, 34, 64, 0.98)),
+    linear-gradient(180deg, rgba(17, 34, 64, 0.98), rgba(10, 25, 47, 0.98));
   box-shadow: var(--shadow);
 }
 
 .portrait-image {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 4 / 5;
   object-fit: cover;
-  object-position: center 24%;
+  object-position: center 18%;
+  border-radius: 18px;
 }
 
 .portrait-card figcaption {
-  padding: 0.85rem 1rem 1rem;
+  padding: 0.8rem 0.8rem 0.95rem;
   color: var(--text-dim);
-  font-size: 0.92rem;
+  font-size: 0.84rem;
+  line-height: 1.6;
+}
+
+.quick-facts {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.quick-fact {
+  padding: 1rem 1rem 0.95rem;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(17, 34, 64, 0.42);
+}
+
+.quick-fact-label {
+  color: var(--accent);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.76rem;
+}
+
+.quick-fact-value {
+  margin-top: 0.35rem;
+  color: var(--text-soft);
+  font-size: 0.95rem;
+  line-height: 1.55;
 }
 
 .nav {
   display: grid;
   gap: 0.8rem;
-  margin-top: 0.5rem;
+  margin-top: 0.25rem;
 }
 
 .nav a {
@@ -260,7 +301,7 @@ h1 {
 }
 
 .content-column {
-  padding: 5.5rem 0 4rem;
+  padding: 6.5rem 0 4.5rem;
 }
 
 .section {
@@ -277,7 +318,7 @@ h1 {
 .section-heading h3,
 .subsection-heading h4 {
   color: var(--text);
-  font-size: 1.1rem;
+  font-size: 1.18rem;
   letter-spacing: 0.01em;
 }
 
@@ -291,6 +332,15 @@ h1 {
   display: grid;
   gap: 1rem;
   max-width: 40rem;
+}
+
+.copy-stack p,
+.entry-body p,
+.project-body p,
+.contact-card p,
+.education-card p,
+.info-card p {
+  font-size: 0.98rem;
 }
 
 .accent-text {
@@ -319,7 +369,7 @@ h1 {
 .contact-card {
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
-  background: var(--navy-panel);
+  background: linear-gradient(180deg, rgba(17, 34, 64, 0.7), rgba(17, 34, 64, 0.46));
   box-shadow: var(--shadow);
 }
 
@@ -384,7 +434,7 @@ h1 {
 .project-card:hover {
   transform: translateY(-0.15rem);
   border-color: var(--line);
-  background: var(--navy-panel-strong);
+  background: linear-gradient(180deg, rgba(17, 34, 64, 0.9), rgba(17, 34, 64, 0.74));
   box-shadow: var(--shadow);
 }
 
@@ -475,7 +525,7 @@ h1 {
 }
 
 .contact-card {
-  padding: 1.7rem;
+  padding: 1.9rem;
 }
 
 .contact-actions {
@@ -526,7 +576,7 @@ h1 {
   transform: translateY(0);
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 980px) {
   .layout {
     grid-template-columns: 1fr;
     gap: 1rem;
@@ -554,8 +604,8 @@ h1 {
     gap: 0.9rem 1.2rem;
   }
 
-  .portrait-card {
-    width: min(100%, 26rem);
+  .intro-cluster {
+    grid-template-columns: minmax(0, 15rem) minmax(0, 1fr);
   }
 }
 
@@ -567,6 +617,11 @@ h1 {
   .intro-sticky,
   .content-column {
     padding-top: 4rem;
+  }
+
+  .intro-cluster {
+    grid-template-columns: 1fr;
+    width: min(100%, 18rem);
   }
 
   .entry-card,
@@ -583,11 +638,11 @@ h1 {
   }
 
   h1 {
-    font-size: clamp(2.5rem, 14vw, 3.6rem);
+    font-size: clamp(2.7rem, 14vw, 3.8rem);
   }
 
   .intro-copy-block h2 {
-    font-size: 1.1rem;
+    font-size: 1.08rem;
   }
 
   .section-heading {
