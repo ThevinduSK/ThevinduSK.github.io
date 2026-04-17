@@ -1,6 +1,6 @@
 const root = document.documentElement;
 const revealItems = document.querySelectorAll("[data-reveal]");
-const navLinks = document.querySelectorAll(".nav a");
+const navLinks = document.querySelectorAll("[data-nav-link]");
 const sections = document.querySelectorAll("[data-section]");
 const yearTarget = document.getElementById("year");
 
